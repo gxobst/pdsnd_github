@@ -64,7 +64,7 @@ qplot(x=User.Type,data = subset(wash,User.Type!=''),main = 'Count of Each User T
 # What is the average travel time for each user type in different cities?
 # average travel time for each user type in Chicago
 by(chi$Trip.Duration,chi$User.Type,summary)
-#Again, the data of type '' would be excluded. The average travel time of 'Customer' is 1930s, while that of 'Subscriber' is 685s, which is way lower than its counterpart of 'Customer'.
+# Again, the data of type '' would be excluded. The average travel time of 'Customer' is 1930s, while that of 'Subscriber' is 685s, which is way lower than its counterpart of 'Customer'.
 ggplot(aes(x=User.Type,y=Trip.Duration),data = subset(chi,User.Type!=''))+
   stat_summary(fun.y='mean',geom = "bar")+
   ggtitle('Average Travel Time for Each User Type in Chicago')+
@@ -83,7 +83,7 @@ ggplot(aes(x=User.Type,y=Trip.Duration),data = subset(wash,User.Type!=''))+
   stat_summary(fun.y='mean',geom = "bar")+
   ggtitle('Average Travel Time for Each User Type in Washington')+
   xlab('User Type')+ylab('Travel Time')
-# In general, users of 'Customer' travel much more longer than users of 'Subscriber' on average, which could be a result of the better subscription that makes the subcribers feel free to use the bike anytime instead of paying for each ride at a higher rate.
+# In general, users of 'Customer' travel much longer than users of 'Subscriber' on average, which could be a result of subscription that makes the subcribers feel free to use the bike anytime instead of paying for each ride at a higher rate.
 # Question 3
 # What is the distribution of birth years of each gender (only available for NYC and Chicago)?
 # Distributation of birth years by gender in Chicago
@@ -104,4 +104,4 @@ ggplot(aes(x=Birth.Year),data=subset(ny,Gender!=""))+
   facet_wrap(~Gender)
 # The dirstibution of birth years for both men and women mainly lies between 1940 and 2000 with birth years around 1990 as the peak.
 # However, there are way more male than female users of all times.
-# Both in NYC and Chicago, users of the birth yeaars around 1990 form the larges user group for both genders. There are more male users than female users. NYC has a larger user group than Chicago.
+# In both NYC and Chicago, users of the birth years around 1990 form the largest user group for both genders. There are more male users than female users. NYC has a larger user group than Chicago.
