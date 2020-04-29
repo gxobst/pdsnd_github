@@ -42,7 +42,8 @@ count1
 count2
 count3
 # There are 5558 users of 'Customer' type in NYC, while 49093 of 'Subscriber' type. Again, we notice that there are 119 users of type null or other failures, which could be a data failure and would be exculded from the plot due to its insignificance.
-qplot(x=User.Type,data = subset(ny,User.Type!=''),main = 'Count of Each User Type in NYC',xlab = 'User Type',ylab = 'Count')
+ggplot(aes(x=User.Type),data = subset(ny,User.Type!=''),main = 'Count of Each User Type in NYC',xlab = 'User Type',ylab = 'Count')+
+  geom_histogram(stat="count")
 # Count of each user type in Washington
 count1=0 # count the number of 'Subscriber'
 count2=0 # count the number of 'Customer'
