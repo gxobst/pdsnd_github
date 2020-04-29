@@ -16,4 +16,4 @@ Files used are 3 csv files, namely bike share data in Washington, NYC and Chicag
 ### Credits
 The following repo has helped me to establish the first README file: https://github.com/udacity/pdsnd_github
 Tools used are R, RStudio, Atom, Git Bash, GitHub
-Special thanks to Udacity, who has made all these possible for me and enriched my knowledge in Programming!
+Special thanks to Udacity, who has made all this possible for me and enriched my knowledge in Programming!
