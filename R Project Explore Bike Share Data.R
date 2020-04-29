@@ -60,7 +60,8 @@ count1
 count2
 count3
 # There are 23450 users of 'Customer' type in Washington, while 65600 of 'Subscriber' type. We notice that there is also one user of type null or other failures, which could be a data failure and would be exculded from the plot due to its insignificance.
-qplot(x=User.Type,data = subset(wash,User.Type!=''),main = 'Count of Each User Type in Washington',xlab = 'User Type',ylab = 'Count')
+ggplot(aes(x=User.Type),data = subset(wash,User.Type!=''),main = 'Count of Each User Type in Washington',xlab = 'User Type',ylab = 'Count')+
+  geom_histogram(stat="count")
 #In all 3 cities,there are significantly more users of type 'Subscriber' than 'Customer'. In both Chicago and Washington, there is only one user of type '1', while in NYC, the number of that is 119, which could be a result of imcompleteness or failure of raw data.
 #Question 2
 #What is the average travel time for each user type in different cities?
