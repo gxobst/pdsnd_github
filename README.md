@@ -4,7 +4,7 @@ Created on 29.04.2020.
 ### Explore Bike Share Data with R
 This is a repository for my Udacity Nano Degree program: Programming for Data Science with R.
 
-### Description
+### Project Description
 In this project, the bike share data are explored with the help of R language. Three main questions have been raised and explored with codes and plots.
 Question 1: What are the counts of each user type in different cities?
 Question 2: What is the average travel time for each user type in different cities?
